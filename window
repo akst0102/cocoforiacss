@@ -1,0 +1,87 @@
+/* OBS */
+body {
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+/* カットイン */
+.sc-gJwTLC,
+/* 背景 */
+.sc-TRNrF,
+/* 盤面 */
+.sc-djvmMF,
+/* キャラ */
+.sc-cwpsFg,
+/* チャット */
+.MuiDrawer-root,
+/* モーダル削除 */
+[role="presentation"],
+/* ヘッダー削除 */
+header>.MuiToolbar-gutters,
+/* 音量 */
+.sc-ikjQzJ,
+/* 拡大縮小 */
+.sc-hZgfyJ,
+/* 鉛筆ボタン */
+.sc-dSuTWQ,
+/* 監視モード */
+.MuiSnackbar-root,
+/* タイマー */
+.sc-hAsxaJ,
+/* スクロールバー */
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* 盤面のサイズ */
+.sc-kgUAyh {
+  width: 100% !important;
+}
+
+/**************************
+　吹き出し
+**************************/
+/* 全体の横幅 */
+.MuiPaper-root {
+  max-width: 960px;
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 15px !important;
+}
+
+/* タイトルの方 */
+.MuiTypography-subtitle2,
+.MuiTypography-body2 {
+  font: inherit !important;
+  font-size: 30px !important;
+}
+
+.MuiToolbar-gutters {
+  padding: 12px 24px;
+}
+
+/* ログの方 */
+.MuiTypography-body1 {
+  font: inherit !important;
+  font-size: 28px !important;
+}
+
+.MuiToolbar-root+div {
+  padding: 0px 24px 16px;
+  height: 160px;
+}
+
+/* アイコン */
+.MuiPaper-root>img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  object-fit: cover;
+  object-position: top;
+}
+
+.MuiPaper-root>img[src=""] {
+  display: none;
+}
