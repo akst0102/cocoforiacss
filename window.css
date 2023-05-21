@@ -1,77 +1,257 @@
-/* OBS */
+/**************************
+ 設定変更箇所
+**************************/
+
+:root {
+  /**************************
+    表示項目の設定
+    **************************/
+  /** ダイス結果(下)のボタンの表示 */
+  --disp-dice-window-btn: inline-flex;
+  /** サイコロ画像の表示 */
+  --disp-dice-picture: flex;
+
+  /**************************
+   ダイスウィンドウの設定
+  **************************/
+  /** ◆◆◆ウィンドウ◆◆◆ */
+  /** 横幅 */
+  --dice-win-width: 800px;
+  /** 背景色 */
+  --dice-win-background: rgba(22, 22, 22, 0.9);
+  /** 枠線 */
+  --dice-win-border: solid 4px white;
+  /** 角の丸み */
+  --dice-win-radius: 10px;
+
+  /** ◆◆◆ダイス画像◆◆◆ */
+  /** サイズ設定 */
+  --dice-pic-size: 80px;
+  /** 上下位置の調整 */
+  --dice-pic-y: 0%;
+  /** 左側のスペースの幅 */
+  --dice-pic-left-space: 200px;
+  /** 右側のスペースの幅 */
+  --dice-pic-right-space: 0px;
+  /** 画像が表示される範囲 */
+  --dice-pic-disp-range: 800px;
+
+  /** ◆◆◆見出し、キャラ名◆◆◆ */
+  /** フォント */
+  --midashi-font: メイリオ;
+  /** フォント色 */
+  --midashi-color: inherit;
+  /** フォントの太さ(normal or bold) */
+  --midashi-font-weight: normal;
+  /** 文字サイズ */
+  --midashi-size: 22px;
+  /** 上の余白 */
+  --midashi-top-space: 15px;
+  /** 下の余白 */
+  --midashi-bottom-space: 15px;
+  /** 左の余白 */
+  --midashi-left-space: 30px;
+
+  /** ◆◆◆ダイス結果(□＞58)◆◆◆ */
+  /** フォント */
+  --dice-result-font: メイリオ;
+  /** フォント色 */
+  --dice-result-color: inherit;
+  /** フォントの太さ(normal or bold) */
+  --dice-result-font-weight: normal;
+  /** 文字サイズ */
+  --dice-result-size: 22px;
+  /** 上の余白 */
+  --dice-result-top-space: 15px;
+  /** 下の余白 */
+  --dice-result-bottom-space: 15px;
+  /** 左の余白 */
+  --dice-result-left-space: 15px;
+
+  /** ◆◆◆内容◆◆◆ */
+  /** フォント */
+  --content-font: メイリオ;
+  /** フォント色 */
+  --content-color: inherit;
+  /** フォントの太さ(normal or bold) */
+  --content-font-weight: normal;
+  /** 文字サイズ */
+  --content-size: 17.5px;
+  /** 下の余白 */
+  --content-bottom-space: 15px;
+  /** 左の余白 */
+  --content-left-space: 30px;
+  /** 右の余白 */
+  --content-right-space: 30px;
+  /** テキストボックスの縦幅 */
+  --content-height: 95px;
+}
+
+/**************************
+ OBS用のおまじない
+**************************/
+
 body {
   background-color: rgba(0, 0, 0, 0);
   margin: 0px auto;
   overflow: hidden;
 }
 
-/* カットイン */
-.sc-gJwTLC,
-/* 背景 */
-.sc-TRNrF,
-/* 盤面 */
-.sc-djvmMF,
-/* キャラ */
-.sc-cwpsFg,
-/* チャット */
-.MuiDrawer-root,
-/* モーダル削除 */
-[role="presentation"],
-/* ヘッダー削除 */
-header>.MuiToolbar-gutters,
-/* 音量 */
-.sc-ikjQzJ,
-/* 拡大縮小 */
-.sc-hZgfyJ,
-/* 鉛筆ボタン */
-.sc-dSuTWQ,
-/* 監視モード */
-.MuiSnackbar-root,
-/* タイマー */
-.sc-hAsxaJ,
-/* スクロールバー */
-::-webkit-scrollbar {
+/**************************
+ 非表示項目の設定
+**************************/
+
+/** ツールバー */
+.MuiToolbar-regular,
+/** もろもろ */
+#root>div>div>div:nth-child(-n+5),
+/** 盤面サイズボタン */
+.iQBLVX,
+/** カットイン */
+.gbgaKQ,
+/** 編集ボタン */
+.MuiFab-root,
+/** チャット欄 */
+.MuiDrawer-paper,
+/** ステータスの削除 */
+.jyrvjI,
+/** 監視モード注釈の削除 */
+.MuiSnackbar-root {
+  display: none !important;
+}
+/** 背景の非表示 */
+.jsiJYh {
+  opacity: 0 !important;
+}
+
+/** 広告の削除 */
+.MuiDialog-root {
   display: none !important;
 }
 
-/* 盤面のサイズ */
-.sc-kgUAyh {
-  width: 100% !important;
+/**************************
+ 表示項目の設定
+**************************/
+
+/** ダイス結果(下)のボタンの表示 */
+.MuiIconButton-edgeEnd {
+  display: var(--disp-dice-window-btn) !important;
 }
 
 /**************************
-　吹き出し
+ ダイスウィンドウの設定
 **************************/
-/* 全体の横幅 */
-.MuiPaper-root {
-  max-width: 960px;
-  background: rgba(0, 0, 0, 0.8) !important;
-  border-radius: 15px !important;
+
+/** ウィンドウ */
+.MuiPaper-elevation1,
+.MuiPaper-rounded:nth-child(2) {
+  /** 横幅 */
+  width: var(--dice-win-width) !important;
+  /** 背景色 */
+  background: var(--dice-win-background) !important;
+  /** 枠線 */
+  border: var(--dice-win-border) !important;
+  /** 角の丸み */
+  border-radius: var(--dice-win-radius) !important;
+}
+/* ダイスウィンドウ裏の背景色非表示 */
+.MuiPaper-elevation1,
+.MuiPaper-rounded:first-child {
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 0px !important;
+  border: none !important;
+}
+/* ダイスウィンドウ周りのドロップシャドウ非表示 */
+.MuiPaper-elevation1 {
+  box-shadow: none !important;
 }
 
-/* タイトルの方 */
-.MuiTypography-subtitle2,
-.MuiTypography-body2 {
-  font: inherit !important;
-  font-size: 30px !important;
+/** ダイス画像 */
+img[src~="dice"] {
+  /** サイズ設定 */
+  width: var(--dice-pic-size) !important;
+  height: var(--dice-pic-size) !important;
+}
+.MuiPaper-elevation1:nth-child(2) > div:first-child {
+  /** 表示、非表示 */
+  display: var(--disp-dice-picture) !important;
+  /** 上下位置の調整 */
+  bottom: var(--dice-pic-y) !important;
+  /** 左側のスペースの幅 */
+  margin-left: var(--dice-pic-left-space) !important;
+  /** 右側のスペースの幅 */
+  right: var(--dice-pic-right-space) !important;
+  /** 画像が表示される範囲 */
+  max-width: var(--dice-pic-disp-range) !important;
 }
 
+/** 見出し、キャラ名 */
+.MuiPaper-rounded .MuiTypography-subtitle2 {
+  /** フォント */
+  font-family: var(--midashi-font) !important;
+  /** フォント色 */
+  color: var(--midashi-color) !important;
+  /** フォントの太さ(normal or bold) */
+  font-weight: var(--midashi-font-weight) !important;
+  /** 文字サイズ */
+  font-size: var(--midashi-size) !important;
+  /** 上の余白 */
+  margin-top: var(--midashi-top-space) !important;
+  /** 下の余白 */
+  margin-bottom: var(--midashi-bottom-space) !important;
+  /** 左の余白 */
+  padding-left: var(--midashi-left-space) !important;
+}
 .MuiToolbar-gutters {
-  padding: 12px 24px;
+  padding-left: 0px !important;
 }
 
-/* ログの方 */
+/** ダイス結果(□＞58) */
+.MuiPaper-rounded .MuiTypography-body2 {
+  /** フォント */
+  font-family: var(--dice-result-font) !important;
+  /** フォント色 */
+  color: var(--dice-result-color) !important;
+  /** フォントの太さ(normal or bold) */
+  font-weight: var(--dice-result-font-weight) !important;
+  /** 文字サイズ */
+  font-size: var(--dice-result-size) !important;
+  /** 上の余白 */
+  margin-top: var(--dice-result-top-space) !important;
+  /** 下の余白 */
+  margin-bottom: var(--dice-result-bottom-space) !important;
+  /** 左の余白 */
+  margin-left: var(--dice-result-left-space) !important;
+}
+
+/** 内容 */
 .MuiTypography-body1 {
-  font: inherit !important;
-  font-size: 28px !important;
+  /** フォント */
+  font-family: var(--content-font) !important;
+  /** フォント色 */
+  color: var(--content-color) !important;
+  /** フォントの太さ(normal or bold) */
+  font-weight: var(--content-font-weight) !important;
+  /** 文字サイズ */
+  font-size: var(--content-size) !important;
 }
 
-.MuiToolbar-root+div {
-  padding: 0px 24px 16px;
-  height: 160px;
+.MuiPaper-elevation1:nth-child(2) > div:nth-child(3) {
+  /** 下の余白 */
+  padding-bottom: var(--content-bottom-space) !important;
+  /** 左の余白 */
+  padding-left: var(--content-left-space) !important;
+  /** 右の余白 */
+  padding-right: var(--content-right-space) !important;
+  /** テキストボックスの縦幅 */
+  height: var(--content-height) !important;
+}
+/** スクロールバーの削除 */
+.MuiPaper-elevation1:nth-child(2) > div:nth-child(3)::-webkit-scrollbar {
+  display: none !important;
 }
 
-/* アイコン */
+/** アイコン */
 .MuiPaper-root>img {
   width: 140px;
   height: 140px;
