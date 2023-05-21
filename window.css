@@ -76,7 +76,7 @@
   /** フォントの太さ(normal or bold) */
   --content-font-weight: normal;
   /** 文字サイズ */
-  --content-size: 17.5px;
+  --content-size: 18px;
   /** 下の余白 */
   --content-bottom-space: 15px;
   /** 左の余白 */
@@ -253,11 +253,12 @@ img[src~="dice"] {
 
 /** アイコン */
 .MuiPaper-root>img {
-  width: 140px;
-  height: 140px;
-  margin-bottom: 5px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 3px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
+  border: solid 2px white;
   object-fit: cover;
   object-position: top;
 }
